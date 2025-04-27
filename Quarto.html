@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UNICEF Global Issue Awareness Report</title>
+  <!-- Cosmo theme via Bootswatch CDN (you can inline these if you need embed-resources:true) -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/cosmo/bootstrap.min.css" 
+    integrity="sha384-…"
+    crossorigin="anonymous">
+  <style>
+    /* Simple “code-fold” styling */
+    .fold-btn { cursor: pointer; color: #0d6efd; margin-bottom: 0.5rem; }
+    .fold-content { display: none; padding: .5rem; background: #f8f9fa; border-radius: .25rem; }
+  </style>
+</head>
+<body class="container py-4">
+
+  <header class="mb-5">
+    <h1>UNICEF Global Issue Awareness Report</h1>
+    <p><small>Data Analyst | 2025-04-27</small></p>
+  </header>
+
+  <section id="intro" class="mb-5">
+    <h2>Introduction</h2>
+    <p><strong>Context:</strong> You are a Data Anat at <strong>UNICEF</strong>, tasked with raising public awareness on a critical global issue through data-driven storytelling and visualisation.</p>
+    <p><strong>Objective:</strong> Create an HTML report with narrative and at least four Plotnine visualisations:</p>
+    <ul>
+      <li>A <strong>World Map</strong> chart</li>
+      <li>A <strong>Bar Chart</strong></li>
+      <li>A <strong>Scatterplot</strong> with linear regression line</li>
+      <li>A <strong>Time-Series</strong> chart</li>
+    </ul>
+
+    <div class="fold-btn" onclick="
+      const f = this.nextElementSibling;
+      f.style.display = f.style.display === 'none' ? 'block' : 'none';
+    ">Show/Hide Data Preparation Code</div>
+    <pre class="fold-content"><code># Python data prep (hidden by default)
+import pandas as pd
+ind1 = pd.read_csv('unicef_indicator_1.csv')
+ind2 = pd.read_csv('unicef_indicator_2.csv')
+meta = pd.read_csv('unicef_metadata.csv')
+# …merge & prepare for plotting…</code></pre>
+  </section>
+
+  <section id="narrative" class="mb-5">
+    <h2>Global Trends in Indicator 1 and 2</h2>
+    <p>Over the past two decades, <strong>Indicator 1</strong> and <strong>Indicator 2</strong> have shown significant shifts across regions.</p>
+    <ul>
+      <li><em>Sub-Saharan Africa</em> continues to lag behind.</li>
+      <li><em>Latin America &amp; Caribbean</em> shows steady improvement.</li>
+      <li><em>East Asia &amp; Pacific</em> achieved rapid gains after 2005.</li>
+    </ul>
+  </section>
+
+  <section id="visualisations" class="mb-5">
+    <h2>1. World Map of Indicator 1</h2>
+    <img src="img 1.png"  class="img-fluid mb-4"/>
+
+    <h2>2. Bar Chart: Top 10 Countries by Indicator 1</h2>
+    <img src="img 2.png" class="img-fluid mb-4"/>
+
+    <h2>3. Scatterplot with Regression: Indicator 1 vs Indicator 2</h2>
+    <img src="img 3.png" class="img-fluid mb-4"/>
+
+    <h2>4. Time-Series: Global Average of Indicator 1 Over Years</h2>
+    <img src="img 4.png" class="img-fluid"/>
+  </section>
+
+
+    <section id="conclusion" class="mb-5">
+        <h2>Conclusion</h2>
+        <p>In conclusion, the visualizations provide valuable insights into global patterns related to the selected indicators. The world map highlights regional disparities, while the bar chart identifies the top-performing countries. The scatterplot reveals a positive correlation between economic strength and life expectancy, and the time-series chart captures the consistent growth of the global population over time. Together, these visualizations effectively demonstrate how data can uncover meaningful trends, helping policymakers and researchers make more informed decisions.</p>
+
+  <footer class="mt-5">
+    <p><em>Report prepared by: Data Analyst for UNICEF</em></p>
+  </footer>
+
+  <!-- Optional: if you inlined JS/CSS for code-fold, you could skip this -->
+  <script>
+    // Nothing else needed—fold logic is inline on the button
+  </script>
+</body>
+</html>
